@@ -8,6 +8,10 @@ module.exports = {
       // Other upload options...
     },
     assert: {
+      assertions: {
+        performance: [">=90"],
+        accessibility: [">=95"],
+      },
       // Include any other assertions you want to keep
       "categories:performance": ["error", { minScore: 0.9 }],
       "categories:accessibility": ["warn", { minScore: 0.9 }],
