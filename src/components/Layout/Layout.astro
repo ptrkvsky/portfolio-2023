@@ -1,6 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import "../styles/transition.css";
+import "@styles/fonts.scss";
+import "@styles/variables.scss";
+import "@styles/global.scss";
 
 interface Props {
   title: string;
@@ -26,11 +28,6 @@ const { title } = Astro.props;
       <a href="/documentation">Doc</a>
     </header>
     <slot />
-    <style is:global>
-      :root {
-        --color-absolute-zero: hsl(214 100% 35% / 100%);
-        --background-main: hsl(43, 39, 93, 100%);
-      }
-    </style>
+    <footer>footer</footer>
   </body>
 </html>
