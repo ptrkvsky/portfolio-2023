@@ -1,0 +1,15 @@
+---
+import Layout from "../components/Layout.astro";
+import { fade } from "astro:transitions";
+---
+
+<Layout title="Documentation.">
+  <h1>Documentation</h1>
+  <div class="illu">
+    <img
+      transition:animate={fade({ duration: "5s" })}
+      transition:name={`photo-1`}
+      src="/assets/images/bien-estimer.webp"
+    />
+  </div>
+</Layout>

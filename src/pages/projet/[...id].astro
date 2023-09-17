@@ -1,0 +1,34 @@
+---
+import Layout from "../../components/Layout.astro";
+import { fade } from "astro:transitions";
+
+export async function getStaticPaths() {
+  const projets = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+    {
+      id: 4,
+    },
+  ];
+  return projets.map((photo) => ({ params: { id: photo.id } }));
+}
+
+const { id } = Astro.params;
+---
+
+<Layout title="Documentation.">
+  <h1>Projet {id}</h1>
+  <div class="illu">
+    <img
+      transition:name={`photo-${id}`}
+      src="/assets/images/bien-estimer.webp"
+    />
+  </div>
+</Layout>
