@@ -1,8 +1,10 @@
-:global(:root) {
+:root {
   font-size: calc(100vw / 1920 * 10);
 }
+
 body {
-  font-family: "Montreal";
+  font-family: "Montreal", "sans-serif";
   background-color: var(--background-main);
   color: var(--color-absolute-zero);
+  font-size: clamp(14px, 1.4rem, 1.4rem);
 }
