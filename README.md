@@ -155,6 +155,16 @@ My Lighthouse audits cover key aspects of web development, including:
 
 - **SEO**: Visibility on search engines is crucial. My audits analyze your website's search engine optimization to ensure it's optimized for discoverability.
 
+## Testing with Jest and Playwright
+
+Quality assurance is at the heart of this project, and to ensure that the application functions flawlessly, I employ robust testing methodologies. The primary testing stack includes **Jest** and **Playwright**.
+
+- **Jest**: I use Jest, a widely recognized JavaScript testing framework, to perform unit tests, integration tests, and snapshot testing. Jest provides a comprehensive suite of testing utilities that enable me to verify the correctness of individual components, functions, and modules within the application.
+
+- **Playwright**: For end-to-end testing and ensuring a smooth user experience, I rely on Playwright. Playwright allows me to automate browser interactions, covering critical user journeys to detect any potential issues or regressions. This ensures that the application behaves as expected across different browsers and environments.
+
+Together, Jest and Playwright form a robust testing strategy that not only helps me maintain code quality but also provides confidence that the application functions reliably for users.
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
