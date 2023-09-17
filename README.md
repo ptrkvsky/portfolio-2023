@@ -139,7 +139,21 @@ Here are some of the key libraries and tools used in this project:
 
 2. **GreenSock Animation Platform (GSAP)** - GSAP is a powerful and flexible JavaScript animation library for creating smooth and interactive animations in web applications.
 
-<!-- Add more libraries and tools as needed -->
+## Lighthouse Audit
+
+In this project, I'm committed to delivering a top-notch web experience to users, and one of the ways I ensure this is by regularly conducting Lighthouse audits. Lighthouse is an open-source tool from Google that helps me evaluate and improve the quality of my web applications.
+
+### What I Audit
+
+My Lighthouse audits cover key aspects of web development, including:
+
+- **Performance**: I measure your application's loading speed, responsiveness, and other performance-related metrics to ensure that users experience fast and efficient interactions.
+
+- **Accessibility**: Accessibility is a top priority. I assess your project for adherence to accessibility standards, making sure everyone, regardless of ability, can use your application effectively.
+
+- **Best Practices**: I follow industry best practices and ensure that your codebase aligns with recommended coding standards and security practices.
+
+- **SEO**: Visibility on search engines is crucial. My audits analyze your website's search engine optimization to ensure it's optimized for discoverability.
 
 ## 🧞 Commands
 
