@@ -21,9 +21,10 @@
       "@helpers/*": ["src/helpers/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@lib/*": ["src/libs/*"],
+      "@lib/*": ["src/lib/*"],
       "@posts/*": ["src/posts/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@config": ["src/config.ts"]
     }
   }
 }

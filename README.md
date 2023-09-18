@@ -87,6 +87,14 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## 📊 Managing Data with Headless CMS Sanity
+
+In this project, the data management aspect is seamlessly handled using the headless CMS Sanity. Sanity offers a flexible and intuitive content management system that empowers the seamless creation, editing, and organization of content for your web application. With Sanity, you can effortlessly manage various data types, from text and images to structured content.
+
+The headless CMS approach allows you to separate content management from your application's frontend, providing the freedom to design and structure your content as needed while ensuring it's easily accessible via APIs. This flexibility not only streamlines content updates but also facilitates collaboration between content creators and developers.
+
+Sanity provides a user-friendly interface for content editors to work with, making it an ideal choice for projects that prioritize content management efficiency and scalability. By integrating Sanity into this project, I've ensured that the data driving this portfolio is easily maintainable and adaptable to future needs.
+
 ## Usage of Path Aliases
 
 In this project, we've configured TypeScript with path aliases to simplify module imports and enhance code readability. Path aliases allow us to use custom import paths for various parts of the project without needing to specify the full file path each time.

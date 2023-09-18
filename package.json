@@ -12,15 +12,19 @@
     "test:e2e": "npx playwright test"
   },
   "dependencies": {
+    "@sanity/client": "^6.4.12",
     "astro": "^3.1.0",
     "gsap": "npm:@gsap/shockingly@^3.12.2",
+    "highlight.js": "^11.8.0",
     "sass": "^1.67.0",
     "vitest": "^0.34.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.38.0",
+    "@portabletext/to-html": "^2.0.3",
     "@types/node": "^20.6.2",
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0"
+    "prettier-plugin-astro": "^0.12.0",
+    "schema-dts": "^1.1.2"
   }
 }

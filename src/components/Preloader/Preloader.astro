@@ -7,60 +7,72 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const delay = 0;
-    gsap
-      .timeline()
-      .call(() => {
-        document.querySelector("body").style.backgroundColor = "#f4f0e6";
-      })
-      .to(".preloader__item.one", {
-        autoAlpha: 1,
-        duration: 0,
-        delay: delay,
-      })
-      .to(".preloader__item.one", {
-        autoAlpha: 0,
-        duration: 0,
-        delay: 0.5,
-      })
-      .to(".preloader__item.two", {
-        autoAlpha: 1,
-        duration: 0,
-        delay: 0,
-      })
-      .to(".preloader__item.two", {
-        autoAlpha: 0,
-        duration: 0,
-        delay: 0.5,
-      })
-      .to(".preloader__item.three", {
-        autoAlpha: 1,
-        duration: 0,
-        delay: 0,
-      })
-      .to(".preloader__item.three", {
-        autoAlpha: 0,
-        duration: 0,
-        delay: 0.5,
-      })
-      .to("#preloader", {
-        y: "100%", // Corrected property name to 'y' for translateY
-        duration: 0.75,
-        ease: "power2.inOut",
-      })
-      .from("main", {
-        scale: 1.01,
-        y: "-5%", // Corrected property name to 'y' for translateY
-        duration: 0.5,
-        delay: -0.4,
-        ease: "power1.inOut",
-      })
-      .call(() => {
-        document.querySelector("body").classList.remove("o-hidden");
-      });
+    const body = document.querySelector("body");
+    const preloaderWrapper = document.querySelector("#preloader");
+    if (!body) return;
+
+    if (window.innerWidth > 1024) {
+      gsap
+        .timeline()
+        .call(() => {
+          body.classList.add("o-hidden");
+          preloaderWrapper?.classList.remove("d-none");
+          body.style.backgroundColor = "#f4f0e6";
+        })
+        .to(".preloader__item.one", {
+          autoAlpha: 1,
+          duration: 0,
+          delay: delay,
+        })
+        .to(".preloader__item.one", {
+          autoAlpha: 0,
+          duration: 0,
+          delay: 0.5,
+        })
+        .to(".preloader__item.two", {
+          autoAlpha: 1,
+          duration: 0,
+          delay: 0,
+        })
+        .to(".preloader__item.two", {
+          autoAlpha: 0,
+          duration: 0,
+          delay: 0.5,
+        })
+        .to(".preloader__item.three", {
+          autoAlpha: 1,
+          duration: 0,
+          delay: 0,
+        })
+        .to(".preloader__item.three", {
+          autoAlpha: 0,
+          duration: 0,
+          delay: 0.5,
+        })
+        // Hide preloader
+        .to("#preloader", {
+          y: "100%",
+          duration: 0.75,
+          ease: "power2.inOut",
+        })
+        // Reveal content
+        .from("main", {
+          scale: 1.01,
+          y: "-5%",
+          duration: 0.5,
+          delay: -0.4,
+          ease: "power1.inOut",
+        })
+        .call(() => {
+          body.classList.remove("o-hidden");
+        });
+    } else {
+      body.style.backgroundColor = "hsl(42.86deg 38.89% 92.94%)";
+    }
   });
 </script>
 
-<div id="preloader" data-testid="preloader" class="preloader items">
+<div id="preloader" data-testid="preloader" class="preloader items d-none">
   <span class="preloader__item one op-0">Qualité</span>
   <span class="preloader__item two op-0">Robustesse</span>
   <span class="preloader__item three op-0">Performance</span>
