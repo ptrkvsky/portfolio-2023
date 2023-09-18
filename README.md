@@ -105,15 +105,17 @@ In our `tsconfig.json`, you'll notice the `"paths"` property under `"compilerOpt
 
 ```json
 "paths": {
-  "@assets/*": ["src/assets/*"],
+ "@assets/*": ["src/assets/*"],
   "@components/*": ["src/components/*"],
   "@features/*": ["src/features/*"],
   "@helpers/*": ["src/helpers/*"],
   "@interfaces/*": ["src/interfaces/*"],
   "@layouts/*": ["src/layouts/*"],
-  "@lib/*": ["src/libs/*"],
+  "@lib/*": ["src/lib/*"],
+  "@functions/*": ["src/functions/*"],
   "@posts/*": ["src/posts/*"],
-  "@styles/*": ["src/styles/*"]
+  "@styles/*": ["src/styles/*"],
+  "@config": ["src/config.ts"]
 }
 ```
 

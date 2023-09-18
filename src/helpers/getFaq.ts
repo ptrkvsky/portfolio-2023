@@ -1,13 +1,13 @@
-import type { FAQItem } from '@interfaces/FAQItem';
-import type { FAQPage } from 'schema-dts';
+import type { FAQItem } from "@interfaces/FAQItem";
+import type { FAQPage } from "schema-dts";
 
 export function getFaq(faqItems: FAQItem[]) {
-  const mainEntity = faqItems.map((faqItem) => {
+  const mainEntity = faqItems?.map((faqItem) => {
     const item = {
-      '@type': 'Question',
+      "@type": "Question",
       name: faqItem.question,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: faqItem.answer,
       },
     };
@@ -15,7 +15,7 @@ export function getFaq(faqItems: FAQItem[]) {
   });
 
   const faq: FAQPage = {
-    '@type': 'FAQPage',
+    "@type": "FAQPage",
     mainEntity: mainEntity as any,
   };
   return faq;

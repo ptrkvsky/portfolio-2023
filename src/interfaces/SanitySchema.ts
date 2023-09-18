@@ -79,6 +79,7 @@ export interface Comment extends SanityDocument {
  *
  */
 export interface Post extends SanityDocument {
+  _id: string;
   _type: "post";
 
   /**

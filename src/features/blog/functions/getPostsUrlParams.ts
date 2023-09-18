@@ -1,5 +1,5 @@
-import type { Post } from '@interfaces/SanitySchema';
-import type { SanityAllPost } from '../interfaces/SanityAllPost';
+import type { Post } from "@interfaces/SanitySchema";
+import type { SanityAllPost } from "../interfaces/SanityAllPost";
 
 /**
  * Get posts and return an object to build post's pages
@@ -7,7 +7,7 @@ import type { SanityAllPost } from '../interfaces/SanityAllPost';
  * @returns object
  */
 export function getPostsUrlParams(sanityPosts: SanityAllPost) {
-  return sanityPosts.allPost.map((post) => {
+  return sanityPosts?.allPost.map((post) => {
     const param = {
       params: {
         slug: post?.slug?.current,

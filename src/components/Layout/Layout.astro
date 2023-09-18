@@ -20,8 +20,18 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <ViewTransitions />
-  </head>
-  <body style="background-color: hsl(214 100% 35% / 100%)">
+    <script>
+      import { shouldAnimatePreloader } from "@functions/shouldAnimatePreloader.ts";
+      import { setBodyBackground } from "./Layout.functions.ts";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const isPreloaderNeeded = shouldAnimatePreloader();
+        setBodyBackground(isPreloaderNeeded);
+      });
+    </script></head
+  >
+
+  <body style="opacity: 0">
     <Preloader />
     <Header />
     <main>

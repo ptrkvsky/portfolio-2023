@@ -22,6 +22,7 @@
       "@interfaces/*": ["src/interfaces/*"],
       "@layouts/*": ["src/layouts/*"],
       "@lib/*": ["src/lib/*"],
+      "@functions/*": ["src/functions/*"],
       "@posts/*": ["src/posts/*"],
       "@styles/*": ["src/styles/*"],
       "@config": ["src/config.ts"]

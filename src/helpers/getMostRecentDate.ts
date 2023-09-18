@@ -1,5 +1,5 @@
-import type { Post } from '@interfaces/SanitySchema';
-import type { MDXInstance } from 'astro';
+import type { Post } from "@interfaces/SanitySchema";
+import type { MDXInstance } from "astro";
 
 /**
  * @description take a list of posts and return the most recent date
