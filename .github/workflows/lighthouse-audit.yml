@@ -9,5 +9,7 @@ jobs:
         with:
           node-version: 18
       - run: npm install && npm install -g @lhci/cli@0.12.x
+        env:
+          PUBLIC_SANITY_PROJECT_ID: ${{ secrets.PUBLIC_SANITY_PROJECT_ID }} # Use the secret here
       - run: npm run build
       - run: lhci autorun
