@@ -14,6 +14,8 @@ jobs:
         run: npm run build
         env:
           PUBLIC_SANITY_PROJECT_ID: ${{ secrets.PUBLIC_SANITY_PROJECT_ID }}
+          PUBLIC_SANITY_DATASET: ${{ secrets.PUBLIC_SANITY_DATASET }}
+          SANITY_READ_TOKEN: ${{ secrets.SANITY_READ_TOKEN }}
 
       - name: Lighthouse Autorun
         run: lhci autorun
