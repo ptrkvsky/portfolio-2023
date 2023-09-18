@@ -1,5 +1,5 @@
 ---
-import { Layout } from "@components/Layout";
+import { Layout } from "@components/.";
 import type { SanityAllPost } from "@features/blog/interfaces/SanityAllPost";
 import { queryAllPosts } from "@features/blog/queries/queryAllPosts";
 import fetchSanity from "@helpers/fetchSanity";
@@ -13,7 +13,7 @@ const mostRecentDate = getMostRecentDate(posts.allPost);
 
 /* SEO */
 const title =
-  "Liste d'articles sur le développement informatique écrit par Johan Petrikovsky";
+  "Liste d'articles sur le développement informatique écrit par Johan Petrikovppagesky";
 const description =
   "Des articles et des informations pour les développeurs Frontend qui veulent suivre l'actualité";
 const schema = getSchemaBlogListing(mostRecentDate);
