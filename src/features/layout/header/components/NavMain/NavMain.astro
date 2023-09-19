@@ -2,7 +2,19 @@
 
 ---
 
-<nav data-testid="nav-main">
+<nav class="nav-main" data-testid="nav-main">
   <a href="/">Projets</a>
   <a href="/">Contact</a>
+  <a href="/">A Propos</a>
 </nav>
+
+<style lang="scss">
+  .nav-main {
+    display: flex;
+    gap: var(--spacing-3xl);
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+</style>

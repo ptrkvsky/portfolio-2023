@@ -2,12 +2,20 @@
 import { Logo } from "@features/layout/header/components/Logo";
 import { NavMain } from "@features/layout/header/components/NavMain";
 import { Clock } from "@features/layout/header/components/Clock";
+import { City } from "@features/layout/header/components/City";
+import { ButtonMenu } from "@features/layout/header/components/ButtonMenu";
 ---
 
 <header data-testid="header" class="header max-container">
-  <Logo />
-  <NavMain />
-  <Clock />
+  <div class="wrapper-logo-nav">
+    <Logo />
+    <NavMain />
+  </div>
+  <div class="wrapper-city-clock">
+    <City />
+    <Clock />
+  </div>
+  <ButtonMenu />
 </header>
 
 <style>
@@ -17,5 +25,20 @@ import { Clock } from "@features/layout/header/components/Clock";
     justify-content: space-between;
     height: var(--spacing-3xl);
   }
+
+  .wrapper-logo-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-5xl);
+  }
+
+  .wrapper-city-clock {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3xl);
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
 </style>
- @features/layout/components/Logo @features/layout/components/NavMain

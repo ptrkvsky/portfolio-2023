@@ -1,0 +1,118 @@
+<script>
+  import gsap from "gsap";
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector("#button-menu");
+    const menu = document.querySelector("#menu-mobile");
+    const textMenu = document.querySelector("#text-menu");
+    const textFermer = document.querySelector("#text-fermer");
+
+    // Hide fermer
+    gsap.set(textFermer, {
+      translateY: "100%",
+    });
+
+    if (!menuButton || !menu || !textMenu || !textFermer) return;
+
+    menuButton.addEventListener("click", () => {
+      const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+
+      menuButton.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(!isExpanded));
+      menu.setAttribute("aria-hidden", String(isExpanded));
+
+      const tlMenu = gsap
+        .timeline({ paused: true })
+        // Opacity menu
+        .set(menu, {
+          autoAlpha: 1,
+        })
+        // Hide Word Menu
+        .fromTo(
+          textMenu,
+          {
+            translateY: "0",
+          },
+          {
+            translateY: "-100%",
+            duration: 0.5,
+            ease: "expo.inOut",
+          },
+        )
+
+        // Reveal Panel
+        .fromTo(
+          menu,
+          {
+            translateY: "100%",
+          },
+          {
+            translateY: "0",
+            ease: "expo.inOut",
+            duration: 1.2,
+            delay: -0.9,
+          },
+        )
+        // Reveal Word Fermer
+        .fromTo(
+          textFermer,
+          {
+            translateY: "100%",
+          },
+          {
+            translateY: "0%",
+            duration: 0.5,
+            ease: "expo.inOut",
+            delay: -0.25,
+          },
+        );
+
+      if (isExpanded) {
+        tlMenu.reverse(0);
+      } else {
+        tlMenu.play(0);
+      }
+    });
+  });
+</script>
+
+<button
+  data-testid="button-menu"
+  class="button-menu relative o-hidden"
+  id="button-menu"
+  aria-expanded="false"
+  aria-controls="menu"
+>
+  <span id="text-menu" class="text text-menu" aria-hidden="false">Menu</span>
+  <span id="text-fermer" class="text text-fermer" aria-hidden="true"
+    >Fermer</span
+  >
+</button>
+
+<style lang="scss">
+  .button-menu {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: inherit;
+      min-width: 42px;
+      min-height: 15px;
+      display: inline-block;
+
+      text-align: right;
+      padding: 0;
+      color: var(--color-absolute-zero);
+      border: none;
+      background: none;
+    }
+  }
+
+  .text {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .text-fermer {
+    color: var(--color-romance);
+  }
+</style>
