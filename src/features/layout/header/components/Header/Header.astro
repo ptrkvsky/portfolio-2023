@@ -1,0 +1,21 @@
+---
+import { Logo } from "@features/layout/header/components/Logo";
+import { NavMain } from "@features/layout/header/components/NavMain";
+import { Clock } from "@features/layout/header/components/Clock";
+---
+
+<header data-testid="header" class="header max-container">
+  <Logo />
+  <NavMain />
+  <Clock />
+</header>
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--spacing-3xl);
+  }
+</style>
+ @features/layout/components/Logo @features/layout/components/NavMain

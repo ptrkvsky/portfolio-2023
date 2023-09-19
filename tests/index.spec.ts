@@ -1,6 +1,11 @@
+import { testLayout } from "@features/layout/index.spec";
 import { test, expect } from "@playwright/test";
 
 const homeTitle = "Johan Petrikovsky développeur React Freelance à Toulouse";
+
+test.describe("Test features", () => {
+  testLayout();
+});
 
 test("meta is correct", async ({ page }) => {
   await page.goto("http://localhost:4321/");
@@ -14,10 +19,16 @@ test("should find the header element in the DOM", async ({ page }) => {
   expect(headerElement).not.toBeNull();
 });
 
-test("should find the logo element in the DOM", async ({ page }) => {
-  const logo = page.getByTestId("header___logo");
+test("should find the city element in the header", async ({ page }) => {
+  const city = page.getByTestId("header___city");
 
-  expect(logo).not.toBeNull();
+  await expect(city).not.toBeNull();
+});
+
+test("should find the main nav element in the DOM", async ({ page }) => {
+  const navElement = page.getByTestId("nav-main");
+
+  expect(navElement).not.toBeNull();
 });
 
 test("logo link", async ({ page }) => {

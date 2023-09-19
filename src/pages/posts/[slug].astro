@@ -1,4 +1,5 @@
 ---
+import { Layout } from "@features/layout/components/Layout";
 import { toHTML } from "@portabletext/to-html";
 import type { SanityAllPost } from "@features/blog/interfaces/SanityAllPost";
 import type { Post } from "@interfaces/index";
@@ -10,7 +11,6 @@ import { portableTextComponents } from "@helpers/portableTextComponents";
 import { getGraphBlogPost } from "@helpers/getGraphBlogPost";
 import { getBreadcrumbItems } from "@features/blog/functions";
 import getPostComments from "@features/blog/functions/getPostsComments";
-import { Layout } from "@components/Layout";
 
 interface AstroProps {
   post: Post;
@@ -47,3 +47,4 @@ const breadcrumbItems = getBreadcrumbItems(post);
 <Layout title={post.seoTitle}>
   <h1>{post.title}</h1>
 </Layout>
+ @features/layout/components/Layout
