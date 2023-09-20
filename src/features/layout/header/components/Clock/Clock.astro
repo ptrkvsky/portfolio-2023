@@ -21,7 +21,7 @@
     minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("astro:page-load", () => {
     setInterval(updateClock, 1000);
     updateClock();
   });

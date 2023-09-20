@@ -3,23 +3,9 @@
 ---
 
 <script>
-  import { shouldAnimatePreloader } from "@functions/.";
-  import { animatePreloader, setDefaultBodyStyle } from "./Preloader.functions";
+  import { masterFunction } from "./Preloader.functions";
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const isPreloaderAnimationNeeded = shouldAnimatePreloader();
-    const body = document.querySelector("body");
-    if (!body) return;
-
-    if (isPreloaderAnimationNeeded) {
-      const preloaderWrapper = document.querySelector("#preloader");
-      if (!preloaderWrapper) return;
-
-      animatePreloader(preloaderWrapper, body);
-    } else {
-      setDefaultBodyStyle(body);
-    }
-  });
+  document.addEventListener("astro:page-load", masterFunction);
 </script>
 
 <div id="preloader" data-testid="preloader" class="preloader items d-none">

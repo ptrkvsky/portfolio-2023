@@ -3,7 +3,7 @@ import { ViewTransitions } from "astro:transitions";
 import "@styles/index.scss";
 import { Header } from "@features/layout/header/components/Header";
 import { Preloader } from "@features/layout/components/Preloader";
-import { MenuMobile } from "@features/layout/components/MenuMobile";
+import { MenuMobile } from "@features/layout/menuMobile/components/MenuMobile";
 
 interface Props {
   title: string;
@@ -23,17 +23,23 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
     <script>
+      import { setDefaultBodyStyle } from "@features/layout/components/Preloader/Preloader.functions.ts";
       import { shouldAnimatePreloader } from "@functions/shouldAnimatePreloader.ts";
       import { setBodyBackground } from "./Layout.functions.ts";
 
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("astro:after-swap", () => {
+        // Définition de l'opacité du corps (body) à 1 après le changement de page
+        document.body.style.opacity = "1";
+      });
+
+      document.addEventListener("astro:page-load", () => {
         const isPreloaderNeeded = shouldAnimatePreloader();
         setBodyBackground(isPreloaderNeeded);
       });
     </script></head
   >
 
-  <body style="opacity: 0">
+  <body style="opacity: 0;">
     <Preloader />
     <MenuMobile />
     <Header />

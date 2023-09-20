@@ -4,26 +4,29 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Johan Petrikovsky développeur React Freelance à Toulouse">
-  <h1>Titre</h1>
-  <p class="instructions">
-    To get started, open the directory <code>src/pages</code> in your project.<br
-    />
-    <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-  </p>
-  <ul role="list" class="list link-card-grid">
-    <Card
-      href="/p"
-      title="Documentation"
-      body="Learn how Astro works and explore the official API docs."
-      id="1"
-    />
-    <Card
-      href="/documentation"
-      title="Integrations"
-      body="Supercharge your project with new frameworks and libraries."
-      id="2"
-    />
-  </ul>
+  <div class="max-container">
+    <h1>Titre</h1>
+    <p class="instructions">
+      To get started, open the directory <code>src/pages</code> in your project.<br
+      />
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
+      above.
+    </p>
+    <ul role="list" class="list link-card-grid">
+      <Card
+        href="/p"
+        title="Documentation"
+        body="Learn how Astro works and explore the official API docs."
+        id="1"
+      />
+      <Card
+        href="/documentation"
+        title="Integrations"
+        body="Supercharge your project with new frameworks and libraries."
+        id="2"
+      />
+    </ul>
+  </div>
 </Layout>
 
 <style>

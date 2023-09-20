@@ -1,10 +1,22 @@
 :root {
   font-size: calc(100vw / 1920 * 10);
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: "Montreal", "sans-serif";
+  font-family: "Montreal", Helvetica, Arial, Verdana, Tahoma, sans-serif;
   background-color: var(--color-romance);
   color: var(--color-absolute-zero);
   font-size: clamp(14px, 1.4rem, 1.4rem);
+}
+
+a:visited {
+  color: inherit; /* Cela prendra la couleur définie pour les liens non visités */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

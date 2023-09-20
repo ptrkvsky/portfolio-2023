@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { shouldAnimatePreloader } from "@functions/.";
 
 export function animatePreloader(
   preloaderWrapper: Element,
@@ -67,4 +68,19 @@ export function animatePreloader(
 export function setDefaultBodyStyle(body: HTMLBodyElement) {
   body.style.backgroundColor = "hsl(42.86deg 38.89% 92.94%)";
   body.style.opacity = "1";
+}
+
+export function masterFunction() {
+  const isPreloaderAnimationNeeded = shouldAnimatePreloader();
+  const body = document.querySelector("body");
+  if (!body) return;
+
+  if (isPreloaderAnimationNeeded) {
+    const preloaderWrapper = document.querySelector("#preloader");
+    if (!preloaderWrapper) return;
+
+    animatePreloader(preloaderWrapper, body);
+  } else {
+    setDefaultBodyStyle(body);
+  }
 }
