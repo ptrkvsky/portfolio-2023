@@ -1,6 +1,36 @@
 :root {
   font-size: calc(100vw / 1920 * 10);
 }
+
+:selection {
+  background: var(--absolute-zero);
+  transition: all 0.1s linear;
+}
+
+::selection {
+  background: var(--absolute-zero);
+  transition: all 0.1s linear;
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ebe5d6;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(214 100% 35% / 100%);
+  transition: all 0.3s linear;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(214 100% 35% / 100%);
+}
+
 * {
   box-sizing: border-box;
 }
