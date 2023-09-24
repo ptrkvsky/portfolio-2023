@@ -8,6 +8,9 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
+├── documentation/
+│   ├── ADR_preloader.md
+│   └── >...
 ├── public/
 │   ├── favicon.svg
 │   └── assets/
@@ -148,6 +151,8 @@ Here are some of the key libraries and tools used in this project:
 1. **Prettier** - Prettier is an opinionated code formatter that helps maintain a consistent code style across your project.
 
 2. **GreenSock Animation Platform (GSAP)** - GSAP is a powerful and flexible JavaScript animation library for creating smooth and interactive animations in web applications.
+
+3. **Fontsource** - The Fontsource project simplifies using Google Fonts and other open-source fonts. It provides npm modules you can install for the fonts you want to use.
 
 ## Lighthouse Audit
 

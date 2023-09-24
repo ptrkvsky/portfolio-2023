@@ -1,0 +1,34 @@
+<script>
+  import gsap from "gsap";
+</script>
+
+<div class="introduction">
+  <h1 class="titre">Développeur React Freelance à Toulouse,</h1><p class="text">
+    je crée des expériences numériques exceptionnelles grâce à une décennie
+    d'expertise. Ma passion ? Le code de qualité et des solutions robustes qui
+    font la différence. Mettez en avant la fiabilité de votre projet avec mes
+    compétences en développement React.
+  </p>
+</div>
+
+<style lang="scss">
+  .introduction {
+    margin-top: var(--spacing-3xl);
+    font-family: "Montreal";
+    font-size: clamp(18px, 4.5rem, 4.5rem);
+    line-height: clamp(22px, 5.5rem, 6rem);
+    color: var(--color-absolute-zero);
+    font-variation-settings: "wght" 350;
+    max-width: 137.5rem;
+
+    @media screen and (max-width: 766px) {
+      max-width: 100%;
+      margin-top: var(--spacing-xxl);
+    }
+  }
+
+  .titre,
+  .description {
+    display: inline-block;
+  }
+</style>

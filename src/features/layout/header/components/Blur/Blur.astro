@@ -1,0 +1,38 @@
+<div class="blur"></div>
+
+<style lang="scss">
+  .blur {
+    --blur-height: calc(var(--spacing-3xl) * 1.3461);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    height: var(--blur-height);
+    left: 0;
+
+    mask-image: url("/assets/images/header-mask-left.svg"),
+      url("/assets/images/header-mask-middle.svg"),
+      url("/assets/images/header-mask-right-broad.svg");
+
+    -webkit-mask-image: url("/assets/images/header-mask-left.svg"),
+      url("/assets/images/header-mask-middle.svg"),
+      url("/assets/images/header-mask-right-broad.svg");
+
+    mask-position:
+      left,
+      left top,
+      right;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size:
+      auto,
+      100% var(--spacing-3xl),
+      auto;
+    mask-size:
+      auto,
+      100% var(--spacing-3xl),
+      auto;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+</style>

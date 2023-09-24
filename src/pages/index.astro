@@ -1,11 +1,16 @@
 ---
 import { Layout } from "@features/layout/components/Layout";
+import { Introduction } from "@features/home/components/Introduction";
+import { SectionPresentation } from "@features/home/components/SectionPresentation";
+import { TitleHero } from "@features/home/components/TitleHero";
 import Card from "../components/Card.astro";
 ---
 
 <Layout title="Johan Petrikovsky développeur React Freelance à Toulouse">
   <div class="max-container">
-    <h1>Titre</h1>
+    <Introduction />
+    <TitleHero />
+    <SectionPresentation />
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
       />

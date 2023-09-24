@@ -1,6 +1,12 @@
 import gsap from "gsap";
 import { shouldAnimatePreloader } from "@functions/.";
 
+function preloaderIsOver() {
+  const preloaderOverCompleteEvent = new Event("preloaderIsOver");
+
+  document.dispatchEvent(preloaderOverCompleteEvent);
+}
+
 export function animatePreloader(
   preloaderWrapper: Element,
   body: HTMLBodyElement,
@@ -62,6 +68,7 @@ export function animatePreloader(
     .call(() => {
       body.classList.remove("o-hidden");
       sessionStorage.setItem("isPreloaderSeen", "true");
+      preloaderIsOver();
     });
 }
 
@@ -82,5 +89,6 @@ export function masterFunction() {
     animatePreloader(preloaderWrapper, body);
   } else {
     setDefaultBodyStyle(body);
+    preloaderIsOver();
   }
 }

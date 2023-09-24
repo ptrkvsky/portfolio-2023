@@ -1,0 +1,45 @@
+---
+// Créez une nouvelle instance de l'objet Date
+const date = new Date();
+
+// Obtenez l'année en cours
+const anneeEnCours = date.getFullYear();
+
+const duree = anneeEnCours - 2012;
+---
+
+<script>
+  import { revealTitle } from "./TitleHero.animation.ts";
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.innerWidth > 1024) {
+      revealTitle();
+    }
+  });
+</script>
+
+<p class="title">
+  <span class="split-text o-hidden">
+    <span>{duree}</span>
+  </span><br />
+  <span class="split-text o-hidden">
+    <span>ans</span>
+  </span>
+  <br />
+  <span class="split-text o-hidden">
+    <span>de dev</span>
+  </span>
+</p>
+
+<style lang="css">
+  span {
+    display: inline-block;
+  }
+  .title {
+    margin-top: var(--spacing-3xl);
+
+    font-size: 37.3rem;
+    line-height: 32.2rem;
+    font-family: Grotesk;
+    text-transform: uppercase;
+  }
+</style>

@@ -3,12 +3,12 @@
 }
 
 :selection {
-  background: var(--absolute-zero);
+  background: hsl(214 100% 35% / 100%);
   transition: all 0.1s linear;
 }
 
 ::selection {
-  background: var(--absolute-zero);
+  background: hsl(214 100% 35% / 100%);
   transition: all 0.1s linear;
 }
 

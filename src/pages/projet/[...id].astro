@@ -23,11 +23,13 @@ const { id } = Astro.params;
 ---
 
 <Layout title="Documentation.">
-  <h1>Projet {id}</h1>
-  <div class="illu">
-    <img
-      transition:name={`photo-${id}`}
-      src="/assets/images/bien-estimer.webp"
-    />
+  <div class="max-container">
+    <h1>Projet {id}</h1>
+    <div class="illu">
+      <img
+        transition:name={`photo-${id}`}
+        src="/assets/images/bien-estimer.webp"
+      />
+    </div>
   </div>
 </Layout>

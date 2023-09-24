@@ -4,27 +4,37 @@ import { NavMain } from "@features/layout/header/components/NavMain";
 import { Clock } from "@features/layout/header/components/Clock";
 import { City } from "@features/layout/header/components/City";
 import { ButtonMenu } from "@features/layout/header/components/ButtonMenu";
+import { Blur } from "@features/layout/header/components/Blur";
 ---
 
 <header data-testid="header" class="header max-container">
-  <div class="wrapper-logo-nav">
-    <Logo />
-    <NavMain />
+  <div class="foreground">
+    <div class="wrapper-logo-nav">
+      <Logo />
+      <NavMain />
+    </div>
+    <div class="wrapper-city-clock">
+      <City />
+      <Clock />
+    </div>
+    <ButtonMenu />
   </div>
-  <div class="wrapper-city-clock">
-    <City />
-    <Clock />
-  </div>
-  <ButtonMenu />
+  <Blur />
 </header>
 
 <style>
-  header {
+  .foreground {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: var(--spacing-3xl);
     width: 100%;
+    z-index: 1;
+
+    @media screen and (max-width: 766px) {
+      height: var(--spacing-xl);
+    }
   }
 
   .wrapper-logo-nav {
