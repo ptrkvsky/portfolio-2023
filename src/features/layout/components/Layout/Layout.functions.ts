@@ -3,10 +3,10 @@ export function setBodyBackground(isPreloaderNeeded: boolean) {
 
   if (!body) return;
   if (isPreloaderNeeded) {
-    const absoluteZero = "hsl(214 100% 35% / 100%)";
+    const absoluteZero = "var(--absolute-zero)";
     body.style.backgroundColor = absoluteZero;
   } else {
-    const nomadColor = "hsl(42.86deg 38.89% 92.94%)";
+    const nomadColor = "var(--color-romance)";
     body.style.backgroundColor = nomadColor;
   }
 }
