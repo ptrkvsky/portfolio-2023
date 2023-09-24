@@ -1,19 +1,17 @@
-import type { BreadcrumbItem } from '@interfaces/BreadcrumbItem';
-import type { Post } from '@interfaces/SanitySchema';
+import type { BreadcrumbItem } from "@interfaces/BreadcrumbItem";
 
-export function getBreadcrumbItems(post: Post) {
+export function getBreadcrumbItems(post: any) {
   const breadcrumbItems: BreadcrumbItem[] = [
     {
-      name: 'Accueil',
-      path: '/',
+      name: "Accueil",
+      path: "/",
     },
     {
-      name: 'Articles',
-      path: '/posts',
+      name: "Articles",
+      path: "/posts",
     },
     {
-      //@ts-ignore
-      name: post?.categories ? post?.categories[0]?.title : '',
+      name: post?.categories ? post?.categories[0]?.title : "",
       path: `/categorie/${post?.categories[0]?.slug.current}`,
     },
   ];

@@ -7,8 +7,9 @@ export default async function getPost(refPost: string) {
   };
 
   try {
-    const result: any = await client.fetch(query, params);
+    const result = await client.fetch(query, params);
     return result;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     console.dir(error, { depth: null });
     // console.error('👨‍🚒 error', error.body.error);

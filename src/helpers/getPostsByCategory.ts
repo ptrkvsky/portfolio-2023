@@ -1,8 +1,7 @@
-import type { CategoryPosts } from '@features/blog/interfaces/CategoryPosts';
-import type { Frontmatter } from '@interfaces/Frontmatter';
-import type { Post } from '@interfaces/SanitySchema';
+import type { CategoryPosts } from "@features/blog/interfaces/CategoryPosts";
+// import type { Post } from "@interfaces/SanitySchema";
 
-const getPostsByCategory = (posts: Post[]) => {
+const getPostsByCategory = (posts: any[]) => {
   const postsByCategory = posts.reduce((acc, curr) => {
     // Si la catégorie courante n'est pas présente dans l'élément courant
     if (
@@ -11,7 +10,7 @@ const getPostsByCategory = (posts: Post[]) => {
     ) {
       // Je vais chercher tous les postes de cette catégorie
       const postsCategory = posts.filter(
-        (post) => post.categories[0].title === curr.categories[0].title
+        (post) => post.categories[0].title === curr.categories[0].title,
       );
       // Je créé un nouvel objet catPost avec la catégorie courante  et un tableau vide
       const newPostCat: CategoryPosts = {

@@ -17,7 +17,7 @@ function saveLastPhotoId() {
  * This improves the performance of the page transitions considerably
  * when there is a large number of photos in the grid.
  */
-document.addEventListener('astro:page-load', (e) => {
+document.addEventListener('astro:page-load', () => {
   saveLastPhotoId();
 
   const photos = document.querySelectorAll(
@@ -50,7 +50,7 @@ document.addEventListener('astro:page-load', (e) => {
  * When navigating back to the home page, find the image we're transitioning
  * from and set its transition name.
  */
-document.addEventListener('astro:after-swap', (e) => {
+document.addEventListener('astro:after-swap', () => {
   if (!lastPhotoId) {
     return true;
   }

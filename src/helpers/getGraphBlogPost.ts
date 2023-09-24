@@ -1,14 +1,14 @@
 import { getGraphBreadcrumbItems } from "@features/blog/functions/getGraphBreadcrumbItems";
 import type { BreadcrumbGraphItem } from "@interfaces/BreadcrumbGraphItem";
 import type { FAQItem } from "@interfaces/FAQItem";
-import type { Post } from "@interfaces/SanitySchema";
+// import type { Post } from "@interfaces/SanitySchema";
 import type { Graph } from "schema-dts";
 import { getBreadcrumb } from "./getBreadcrumb";
 import { getFaq } from "./getFaq";
 import getGraphWebsite from "./getGraphWebsite";
 import { type ParamsGetWebPage, getWebPage } from "./getWebPage";
 
-export function getGraphBlogPost(post: Post) {
+export function getGraphBlogPost(post: any) {
   const website = getGraphWebsite();
   const graphBreadcrumbItems: BreadcrumbGraphItem[] =
     getGraphBreadcrumbItems(post);

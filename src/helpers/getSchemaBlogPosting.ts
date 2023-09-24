@@ -1,4 +1,4 @@
-import type { Post } from './../interfaces/SanitySchema';
+// import type { Post } from './../interfaces/SanitySchema';
 
 import type { WithContext, BlogPosting } from 'schema-dts';
 import { seoConfig } from 'src/config';
@@ -12,7 +12,7 @@ const getSchemaBlogPosting = ({
   // body,
   slug,
   title,
-}: Post) => {
+}: any) => {
   const dateModifiedISO = new Date(_updatedAt).toISOString();
   const datePublishedISO = new Date(_createdAt).toISOString();
 

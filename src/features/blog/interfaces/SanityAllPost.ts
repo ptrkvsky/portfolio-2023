@@ -1,5 +1,5 @@
-import type { Post } from '@interfaces/SanitySchema';
+// import type { Post } from '@interfaces/SanitySchema';
 
 export interface SanityAllPost {
-  allPost: Post[];
+  allPost: any[];
 }

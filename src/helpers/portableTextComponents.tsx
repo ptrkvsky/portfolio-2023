@@ -2,7 +2,6 @@ import { client } from "@lib/sanityClient";
 import { slugify } from "@lib/slugify";
 import type { PortableTextHtmlComponents } from "@portabletext/to-html";
 import hljs from "highlight.js";
-//@ts-ignore
 import imageUrlBuilder from "@sanity/image-url";
 import getPost from "@features/blog/functions/getPost";
 
@@ -51,7 +50,6 @@ export const portableTextComponents: Partial<PortableTextHtmlComponents> = {
     },
   },
   marks: {
-    //@ts-ignore
     internalLink: async (prop) => {
       const post = await getPost(prop.value.reference._ref);
       const link = `<a href="${post[0].slug.current}" className="internalLink">${prop.children}</a>`;

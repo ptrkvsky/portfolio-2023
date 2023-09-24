@@ -1,6 +1,5 @@
 import type { Heading } from "./../interfaces/Heading";
 import { slugify } from "@lib/slugify";
-import type { BlockContent } from "@interfaces/SanitySchema";
 
 /**
  * @desc typeguard id Heading
@@ -12,7 +11,7 @@ function isHeading(item: Heading | undefined): item is Heading {
 /**
  * @desc Get block content and return an object with text, hn type, and the id used by the Table of content
  */
-export function getHeadings(text: BlockContent) {
+export function getHeadings(text: any) {
   const headings = text
     ?.map((textItem) => {
       if (

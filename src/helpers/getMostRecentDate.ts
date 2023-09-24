@@ -1,12 +1,11 @@
-import type { Post } from "@interfaces/SanitySchema";
-import type { MDXInstance } from "astro";
+// import type { Post } from "@interfaces/SanitySchema";
 
 /**
  * @description take a list of posts and return the most recent date
  * @param posts
  * @returns
  */
-const getMostRecentDate = (posts: Post[]) => {
+const getMostRecentDate = (posts: any[]) => {
   const [mostRecentDate] = posts
     .map((post) => {
       return post._updatedAt;

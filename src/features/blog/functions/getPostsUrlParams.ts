@@ -1,4 +1,3 @@
-import type { Post } from "@interfaces/SanitySchema";
 import type { SanityAllPost } from "../interfaces/SanityAllPost";
 
 /**
