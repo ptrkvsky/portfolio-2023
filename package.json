@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest",
+    "test:no:watch": "vitest run",
     "test:e2e": "npx playwright test",
     "prepare": "husky install"
   },
