@@ -2,4 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx playwright test
-npx lint-staged
+
+npx eslint .
