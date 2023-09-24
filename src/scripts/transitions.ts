@@ -1,4 +1,4 @@
-let lastPhotoId = '';
+let lastPhotoId = "";
 
 /**
  * Save the ID of the last photo we visited. This is used to set the
@@ -6,8 +6,8 @@ let lastPhotoId = '';
  */
 function saveLastPhotoId() {
   const pathname = window.location.pathname;
-  const photoId = pathname.split('/').pop();
-  lastPhotoId = photoId || '';
+  const photoId = pathname.split("/").pop();
+  lastPhotoId = photoId ?? "";
 }
 
 /**
@@ -17,12 +17,10 @@ function saveLastPhotoId() {
  * This improves the performance of the page transitions considerably
  * when there is a large number of photos in the grid.
  */
-document.addEventListener('astro:page-load', () => {
+document.addEventListener("astro:page-load", () => {
   saveLastPhotoId();
 
-  const photos = document.querySelectorAll(
-    '.grid--large .grid__cell-img-inner'
-  );
+  const photos = document.querySelectorAll(".section-projets___list .illu");
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -32,11 +30,11 @@ document.addEventListener('astro:page-load', () => {
           target.style.viewTransitionName = target.id;
         } else {
           // @ts-ignore - viewTransitionName is not in the spec yet
-          target.style.viewTransitionName = 'none';
+          target.style.viewTransitionName = "none";
         }
       });
     },
-    { threshold: 0 }
+    { threshold: 0 },
   );
 
   // Observe each photo in the grid. When a photo is visible, set its
@@ -50,20 +48,22 @@ document.addEventListener('astro:page-load', () => {
  * When navigating back to the home page, find the image we're transitioning
  * from and set its transition name.
  */
-document.addEventListener('astro:after-swap', () => {
+document.addEventListener("astro:after-swap", () => {
   if (!lastPhotoId) {
     return true;
   }
 
   const photo = document.querySelector(
-    '#photo-' + lastPhotoId
+    "#photo-" + lastPhotoId,
   ) as HTMLImageElement;
+
+  console.log("phooooo", photo);
 
   // If we find the photo we're transitioning from, set its transition name
   // and scroll it into view.
   if (photo) {
     // @ts-ignore - viewTransitionName is not in the spec yet
-    photo.style.viewTransitionName = 'photo-' + lastPhotoId;
+    photo.style.viewTransitionName = "photo-" + lastPhotoId;
     // @ts-ignore - scrollIntoViewIfNeeded is a Chrome-only method
     photo.scrollIntoViewIfNeeded
       ? // @ts-ignore - scrollIntoViewIfNeeded is a Chrome-only method

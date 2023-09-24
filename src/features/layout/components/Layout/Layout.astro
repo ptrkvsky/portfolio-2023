@@ -38,8 +38,9 @@ const { title } = Astro.props;
         const isPreloaderNeeded = shouldAnimatePreloader();
         setBodyBackground(isPreloaderNeeded);
       });
-    </script></head
-  >
+    </script>
+    <script src="../../../../scripts//transitions.ts"></script>
+  </head>
 
   <body style="opacity: 0;">
     <Preloader />
