@@ -4,7 +4,7 @@ import { Introduction } from "@features/home/components/Introduction";
 import { SectionPresentation } from "@features/home/components/SectionPresentation";
 import { TitleHero } from "@features/home/components/TitleHero";
 import { SectionServices } from "@features/home/components/SectionServices";
-import Card from "../components/Card.astro";
+import { SectionProjets } from "@features/home/sectionProjets/SectionProjets";
 ---
 
 <Layout title="Johan Petrikovsky développeur React Freelance à Toulouse">
@@ -13,26 +13,14 @@ import Card from "../components/Card.astro";
     <TitleHero />
     <SectionPresentation />
     <SectionServices />
+    <SectionProjets />
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
       />
       <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
       above.
     </p>
-    <ul role="list" class="list link-card-grid">
-      <Card
-        href="/p"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-        id="1"
-      />
-      <Card
-        href="/documentation"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-        id="2"
-      />
-    </ul>
+    <ul role="list" class="list link-card-grid"></ul>
   </div>
 </Layout>
 
@@ -44,3 +32,4 @@ import Card from "../components/Card.astro";
     font-family: Grotesk;
   }
 </style>
+ @features/home/sectionProjets/SectionProjets

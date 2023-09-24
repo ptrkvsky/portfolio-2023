@@ -2,7 +2,6 @@
 import { Layout } from "@features/layout/components/Layout";
 import { toHTML } from "@portabletext/to-html";
 import type { SanityAllPost } from "@features/blog/interfaces/SanityAllPost";
-import type { Post } from "@interfaces/index";
 import fetchSanity from "@helpers/fetchSanity";
 import { queryAllPosts } from "@features/blog/queries/queryAllPosts";
 import { getPostsUrlParams } from "@features/blog/functions/getPostsUrlParams";
@@ -12,8 +11,8 @@ import { getGraphBlogPost } from "@helpers/getGraphBlogPost";
 import { getBreadcrumbItems } from "@features/blog/functions";
 import getPostComments from "@features/blog/functions/getPostsComments";
 
-interface AstroProps {
-  post: Post;
+interface Props {
+  post: any;
   params: {
     slug: {
       current: string;
@@ -28,7 +27,7 @@ export async function getStaticPaths() {
   return params;
 }
 
-const { post } = Astro.props as AstroProps;
+const { post } = Astro.props;
 if (!post) return;
 const comments = await getPostComments(post._id);
 const graphPost = getGraphBlogPost(post);
@@ -47,4 +46,3 @@ const breadcrumbItems = getBreadcrumbItems(post);
 <Layout title={post.seoTitle}>
   <h1>{post.title}</h1>
 </Layout>
- @features/layout/components/Layout

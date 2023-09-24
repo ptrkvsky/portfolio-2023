@@ -1,0 +1,38 @@
+---
+import { SectionProjetsCard } from "@features/home/sectionProjets/SectionProjetsCard";
+import { SectionProjetsTitle } from "@features/home/sectionProjets/SectionProjetsTitle";
+---
+
+<section class="spacing-section" data-testid="section-projets">
+  <SectionProjetsTitle />
+  <ul class="section-projets___list">
+    <SectionProjetsCard
+      href="/p"
+      title="Documentation"
+      body="Learn how Astro works and explore the official API docs."
+      id="1"
+    />
+    <SectionProjetsCard
+      href="/documentation"
+      title="Integrations"
+      body="Supercharge your project with new frameworks and libraries."
+      id="2"
+    />
+    <SectionProjetsCard
+      href="/documentation"
+      title="Integrations"
+      body="Supercharge your project with new frameworks and libraries."
+      id="3"
+    />
+  </ul>
+</section>
+
+<style>
+  .section-projets___list {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    margin-top: var(--spacing-xl);
+  }
+</style>
