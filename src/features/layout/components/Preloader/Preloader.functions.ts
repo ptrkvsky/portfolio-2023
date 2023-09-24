@@ -73,7 +73,7 @@ export function animatePreloader(
 }
 
 export function setDefaultBodyStyle(body: HTMLBodyElement) {
-  body.style.backgroundColor = "hsl(42.86deg 38.89% 92.94%)";
+  body.style.backgroundColor = "var(--color-romance)";
   body.style.opacity = "1";
 }
 

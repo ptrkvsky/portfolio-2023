@@ -37,9 +37,14 @@
 
 body {
   font-family: "Montreal", Helvetica, Arial, Verdana, Tahoma, sans-serif;
-  background-color: var(--color-romance);
-  color: var(--color-absolute-zero);
   font-size: clamp(14px, 1.4rem, 1.4rem);
+
+  color: var(--color-absolute-zero);
+  background-color: var(--color-romance);
+
+  transition-duration: var(--theme-transition-duration);
+  transition-property: color, background-color;
+  transition-timing-function: var(--theme-transition-ease);
 }
 
 a:visited {

@@ -16,4 +16,11 @@
   --spacing-4xl: 96px;
   --spacing-5xl: 128px;
   --spacing-6xl: 192px;
+
+  --ease-out: cubic-bezier(0, 0.55, 0.45, 1);
+  --ease-in-out: cubic-bezier(0.85, 0, 0.15, 1);
+  --theme-transition-duration: 400ms;
+  --theme-transition-ease: ease-out;
+  --theme-transition: var(--theme-transition-duration)
+    var(--theme-transition-ease);
 }

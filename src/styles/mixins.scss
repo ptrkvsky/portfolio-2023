@@ -1,0 +1,14 @@
+// mixins.scss
+
+// Media query mixin for small screens (up to 576px)
+@mixin mobile-small {
+  @media screen and (max-width: 576px) {
+    @content; // Insert styles within the media query block
+  }
+}
+
+@mixin mobile-large {
+  @media screen and (max-width: 766px) {
+    @content; // Insert styles within the media query block
+  }
+}

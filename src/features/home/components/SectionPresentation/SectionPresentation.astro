@@ -23,11 +23,13 @@
   </p>
 </div>
 
-<style>
+<style lang="scss">
+  @import "@styles/mixins.scss";
+
   .section-presentation {
     padding-left: 102.4rem;
 
-    @media screen and (max-width: 766px) {
+    @include mobile-large {
       padding-left: 0;
     }
   }

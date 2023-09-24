@@ -3,7 +3,19 @@ import { SectionProjetsCard } from "@features/home/sectionProjets/SectionProjets
 import { SectionProjetsTitle } from "@features/home/sectionProjets/SectionProjetsTitle";
 ---
 
-<section class="spacing-section" data-testid="section-projets">
+<script>
+  import { changeColor } from "./SectionProjets.animation";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    changeColor();
+  });
+</script>
+
+<section
+  id="section-projets"
+  class="spacing-section"
+  data-testid="section-projets"
+>
   <SectionProjetsTitle />
   <ul class="section-projets___list">
     <SectionProjetsCard
@@ -27,12 +39,16 @@ import { SectionProjetsTitle } from "@features/home/sectionProjets/SectionProjet
   </ul>
 </section>
 
-<style>
+<style lang="scss">
+  @import "@styles/mixins.scss";
+
   .section-projets___list {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: var(--spacing-xl);
 
-    margin-top: var(--spacing-xl);
+    @include mobile-large {
+      flex-direction: column;
+    }
   }
 </style>
