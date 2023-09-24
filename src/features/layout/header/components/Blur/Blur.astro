@@ -3,6 +3,10 @@
 <style lang="scss">
   .blur {
     --blur-height: calc(var(--spacing-3xl) * 1.3461);
+    @media screen and (max-width: 766px) {
+      --blur-height: calc(var(--spacing-xl) * 1.3461);
+    }
+
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     height: var(--blur-height);

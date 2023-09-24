@@ -1,9 +1,13 @@
 .mini-title {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: var(--spacing-xl);
 
   font-size: 16px;
   line-height: 32px;
 
   font-family: "Ubuntu Mono", sans-serif;
+
+  @media screen and (max-width: 766px) {
+    margin-bottom: var(--spacing-lg);
+  }
 }

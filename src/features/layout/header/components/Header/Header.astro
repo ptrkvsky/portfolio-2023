@@ -23,6 +23,13 @@ import { Blur } from "@features/layout/header/components/Blur";
 </header>
 
 <style>
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 910;
+  }
+
   .foreground {
     position: relative;
     display: flex;
@@ -30,7 +37,7 @@ import { Blur } from "@features/layout/header/components/Blur";
     justify-content: space-between;
     height: var(--spacing-3xl);
     width: 100%;
-    z-index: 1;
+    z-index: 910;
 
     @media screen and (max-width: 766px) {
       height: var(--spacing-xl);
