@@ -14,6 +14,6 @@ test.describe("Button Menu Desktop", () => {
     await page.goto("http://localhost:4321/");
 
     const h1 = page.getByRole("heading", { level: 1 });
-    await expect(h1).toHaveText("Développeur React Freelance à Toulouse");
+    await expect(h1).toHaveText("Développeur React Freelance à Toulouse,");
   });
 });
