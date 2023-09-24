@@ -10,7 +10,7 @@ const duree = anneeEnCours - 2012;
 
 <script>
   import { revealTitle } from "./TitleHero.animation.ts";
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", (e) => {
     if (window.innerWidth > 1024) {
       revealTitle();
     }
