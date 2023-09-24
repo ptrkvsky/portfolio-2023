@@ -154,6 +154,16 @@ Here are some of the key libraries and tools used in this project:
 
 3. **Fontsource** - The Fontsource project simplifies using Google Fonts and other open-source fonts. It provides npm modules you can install for the fonts you want to use.
 
+4. **Husky** - is a Git hook manager that simplifies the setup and configuration of pre-commit and pre-push hooks in your Git repository. These hooks automate essential tasks such as code formatting, linting, and running tests before commits are made. In this project, Husky is configured to run several important checks on precommit:
+
+- **ESLint**: ESLint is used to enforce coding standards and catch potential issues in your codebase before they become problems.
+
+- **Playwright**: Playwright is employed for automating end-to-end tests, ensuring that your web application functions correctly across different browsers and environments.
+
+- **Vitest**: Vitest is a testing tool designed for Vue.js applications. It is set up to execute tests on your Vue components, providing confidence in the functionality and reliability of your application.
+
+By running these checks before each commit, Husky helps maintain code quality and consistency while ensuring that your project remains error-free.
+
 ## Lighthouse Audit
 
 In this project, I'm committed to delivering a top-notch web experience to users, and one of the ways I ensure this is by regularly conducting Lighthouse audits. Lighthouse is an open-source tool from Google that helps me evaluate and improve the quality of my web applications.
