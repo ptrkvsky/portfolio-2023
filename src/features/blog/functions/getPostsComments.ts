@@ -1,5 +1,5 @@
-import { client } from '@lib/sanityClient';
-import type { Comment } from '@interfaces/SanitySchema';
+import { client } from "@lib/sanityClient";
+// import type { Comment } from '@interfaces/SanitySchema';
 
 export default async function getPostComments(refPost: string) {
   const query = `*[_type == "comment" && isActive == true && references($refPost)]`;
@@ -8,11 +8,11 @@ export default async function getPostComments(refPost: string) {
   };
 
   try {
-    const result: Comment[] = await client.fetch(query, params);
+    const result: any[] = await client.fetch(query, params);
     return result;
   } catch (error: any) {
-    console.dir(error, { depth: null });
-    // console.error('👨‍🚒 error', error.body.error);
+    // eslint-disable-next-line no-console
+    console.error("👨‍🚒 error", error.body.error);
     return {
       error: error.res,
     };

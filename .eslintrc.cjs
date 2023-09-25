@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-comment": "off",
+    "no-console": "warn",
   },
   ignorePatterns: ["**/*.spec.ts", "dist/"], // Ignore .spec.ts files
 };
