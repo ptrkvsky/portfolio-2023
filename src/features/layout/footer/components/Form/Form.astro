@@ -1,0 +1,72 @@
+<form>
+  <div class="grid-input">
+    <div class="form-item">
+      <label>Nom</label>
+      <input type="text" value="" />
+    </div>
+    <div class="form-item">
+      <label>Prénom</label>
+      <input type="text" value="" />
+    </div>
+    <div class="form-item">
+      <label>E-mail</label>
+      <input type="text" value="" />
+    </div>
+    <div class="form-item">
+      <label>Entreprise</label>
+      <input type="text" value="" />
+    </div>
+  </div>
+  <div class="wrapper-textarea">
+    <div class="form-item">
+      <label>Message</label>
+      <textarea id="story" name="story" rows="5"> </textarea>
+    </div>
+  </div>
+</form>
+
+<style lang="scss">
+  .grid-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  label {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  input {
+    height: var(--spacing-3xl);
+  }
+
+  input,
+  textarea {
+    background: transparent;
+    border: 1px solid var(--color-absolute-zero);
+    border-radius: var(--spacing-xxl);
+    color: var(--color-absolute-zero);
+    padding: 0 var(--spacing-md);
+    font-family: var(--font-body);
+    font-size: 18px;
+  }
+
+  .wrapper-textarea {
+    margin-top: var(--spacing-md);
+  }
+
+  textarea {
+    padding-top: var(--spacing-md);
+
+    width: 100%;
+    height: var(--spacing-4xl);
+  }
+</style>

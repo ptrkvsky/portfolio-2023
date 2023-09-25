@@ -1,1 +1,19 @@
-<footer>Footer</footer>
+---
+import { FormFooter } from "@features/layout/footer/components/Form";
+---
+
+<footer>
+  <div class="max-container wrapper">
+    <h2 class="title-section">Me <br />Contacter !</h2>
+    <div>
+      <FormFooter />
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+</style>
