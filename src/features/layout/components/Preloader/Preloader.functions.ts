@@ -18,7 +18,7 @@ export function animatePreloader(
     .call(() => {
       body.classList.add("o-hidden");
       preloaderWrapper?.classList.remove("d-none");
-      body.style.backgroundColor = "#f4f0e6";
+      body.style.backgroundColor = "var(--color-romance)";
       body.style.opacity = "1";
     })
     .to(".preloader__item.one", {

@@ -3,10 +3,8 @@ export function setBodyBackground(isPreloaderNeeded: boolean) {
 
   if (!body) return;
   if (isPreloaderNeeded) {
-    const absoluteZero = "var(--absolute-zero)";
-    body.style.backgroundColor = absoluteZero;
+    body.style.backgroundColor = "var(--absolute-zero)";
   } else {
-    const nomadColor = "var(--color-romance)";
-    body.style.backgroundColor = nomadColor;
+    body.style.backgroundColor = "var(--color-romance)";
   }
 }
