@@ -60,4 +60,5 @@ const dataSet = import.meta.env.PUBLIC_SANITY_DATASET;
 export const config = {
   mode: import.meta.env.MODE,
   sanityGraphqlEndpoint: `https://${projectId}.api.sanity.io/${version}/graphql/${dataSet}/default`,
+  projectId,
 };

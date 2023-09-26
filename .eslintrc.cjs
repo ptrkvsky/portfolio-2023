@@ -17,5 +17,5 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "off",
     "no-console": "warn",
   },
-  ignorePatterns: ["**/*.spec.ts", "dist/"], // Ignore .spec.ts files
+  ignorePatterns: ["**/*.spec.ts", "dist/", "src/interfaces/SanityGraphql.ts"], // Ignore .spec.ts files
 };
