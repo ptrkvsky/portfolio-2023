@@ -50,9 +50,11 @@ export const portableTextComponents: Partial<PortableTextHtmlComponents> = {
     },
   },
   marks: {
+    //@ts-ignore
     internalLink: async (prop) => {
       const post = await getPost(prop.value.reference._ref);
-      const link = `<a href="${post[0].slug.current}" className="internalLink">${prop.children}</a>`;
+      const href = post ? post?.slug?.current : "#";
+      const link = `<a href="${href}" className="internalLink">${prop.children}</a>`;
       return link;
     },
     link: ({ text, value }: any) => {

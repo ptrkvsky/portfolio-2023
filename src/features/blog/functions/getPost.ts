@@ -1,3 +1,4 @@
+import type { Post } from "@interfaces/SanityGraphql";
 import { client } from "@lib/sanityClient";
 
 export default async function getPost(refPost: string) {
@@ -7,14 +8,12 @@ export default async function getPost(refPost: string) {
   };
 
   try {
-    const result = await client.fetch(query, params);
+    const result: Post | null = await client.fetch(query, params);
     return result;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     // eslint-disable-next-line no-console
     console.error("👨‍🚒 error", error.body.error);
-    return {
-      error: error.res,
-    };
+    return null;
   }
 }
