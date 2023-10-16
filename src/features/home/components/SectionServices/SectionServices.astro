@@ -1,10 +1,40 @@
+<script>
+  import gsap from "gsap";
+
+  function animateService() {
+    const services = document.querySelectorAll("#service-list .service-item");
+    services.forEach((service) => {
+      const tl = gsap.timeline({ paused: true }).to(service, {
+        translateX: 30,
+        duration: 0.33,
+        ease: "expo.inout",
+      });
+
+      service.addEventListener("mouseenter", () => {
+        tl.play();
+      });
+      service.addEventListener("mouseleave", () => {
+        tl.reverse();
+      });
+    });
+  }
+
+  document.addEventListener("astro:after-swap", () => {
+    animateService();
+  });
+
+  document.addEventListener("astro:page-load", () => {
+    animateService();
+  });
+</script>
+
 <section
   data-testid="section-services"
   class="section-services spacing-section"
   aria-label="section services"
 >
   <h2 class="title-mini">Des services adaptés à vos besoins</h2>
-  <ul class="service-list">
+  <ul id="service-list" class="service-list">
     <li class="service-item">Développement d'appplications React</li>
     <li class="service-item">Refonte d'appplications React</li>
     <li class="service-item">Optimisation des performances</li>
@@ -16,7 +46,7 @@
 <style lang="scss">
   .service-item {
     font-size: clamp(18px, 4rem, 4rem);
-    line-height: 32px;
+    line-height: 4.8rem;
     font-variation-settings: "wght" 500;
     margin-bottom: var(--spacing-md);
 

@@ -162,6 +162,8 @@ Here are some of the key libraries and tools used in this project:
 
 - **Vitest**: Vitest is a testing tool designed for Vue.js applications. It is set up to execute tests on your Vue components, providing confidence in the functionality and reliability of your application.
 
+- **GraphQL Code Generator**: Used to generate types and interfaces from the GraphQL Sanity endpoint. All types goes into SanityGraph
+
 By running these checks before each commit, Husky helps maintain code quality and consistency while ensuring that your project remains error-free.
 
 ## Lighthouse Audit
