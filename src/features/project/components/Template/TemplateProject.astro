@@ -1,0 +1,16 @@
+---
+import { TitleProject } from "../TitleProject";
+
+const { id } = Astro.params;
+---
+
+<script>
+  import { addAstroEventListeners } from "@functions/addAstroEventListeners";
+  import { setColor } from "./TemplateProject.functions";
+
+  addAstroEventListeners(setColor);
+</script>
+<TitleProject title="Safti" />
+<div class="illu">
+  <img transition:name={`photo-${id}`} src="/assets/images/safti-fr.png" />
+</div>

@@ -10,7 +10,6 @@ export function changeColor() {
     endTrigger: "footer",
     onToggle: ({ direction }) => {
       if (direction == 1) {
-        // Hide
         document.documentElement.style.setProperty(
           "--color-absolute-zero",
           "hsl(42.86deg 38.89% 92.94%)",

@@ -57,8 +57,6 @@ document.addEventListener("astro:after-swap", () => {
     "#photo-" + lastPhotoId,
   ) as HTMLImageElement;
 
-  console.log("phooooo", photo);
-
   // If we find the photo we're transitioning from, set its transition name
   // and scroll it into view.
   if (photo) {

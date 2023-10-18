@@ -1,4 +1,5 @@
 <script>
+  import { addAstroEventListeners } from "@functions/addAstroEventListeners";
   import gsap from "gsap";
 
   function animateService() {
@@ -19,13 +20,7 @@
     });
   }
 
-  document.addEventListener("astro:after-swap", () => {
-    animateService();
-  });
-
-  document.addEventListener("astro:page-load", () => {
-    animateService();
-  });
+  addAstroEventListeners(animateService);
 </script>
 
 <section

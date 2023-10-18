@@ -1,5 +1,6 @@
 ---
 import { Layout } from "@features/layout/components/Layout";
+import { TemplateProject } from "@features/project/components/Template";
 
 export async function getStaticPaths() {
   const projets = [
@@ -18,18 +19,10 @@ export async function getStaticPaths() {
   ];
   return projets.map((photo) => ({ params: { id: photo.id } }));
 }
-
-const { id } = Astro.params;
 ---
 
 <Layout title="Documentation.">
   <div class="max-container">
-    <h1>Projet {id}</h1>
-    <div class="illu">
-      <img
-        transition:name={`photo-${id}`}
-        src="/assets/images/bien-estimer.webp"
-      />
-    </div>
+    <TemplateProject />
   </div>
 </Layout>
