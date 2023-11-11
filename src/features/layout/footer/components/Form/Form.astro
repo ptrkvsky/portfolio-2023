@@ -29,10 +29,16 @@
 </form>
 
 <style lang="scss">
+  @import "@styles/mixins.scss";
+
   .grid-input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
+
+    @include mobile-large {
+      grid-template-columns: 1fr;
+    }
   }
 
   .form-item {

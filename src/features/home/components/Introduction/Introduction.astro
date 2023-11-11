@@ -1,5 +1,16 @@
+<script>
+  import { animateTitle } from "./introduction.animation";
+  import { isMobile } from "@helpers/isMobile";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!isMobile()) animateTitle();
+  });
+</script>
+
 <div class="introduction">
-  <h1 class="titre">Développeur React Freelance à Toulouse,</h1><p class="text">
+  <h1 class="titre split-text o-hidden">
+    Développeur React Freelance à Toulouse,
+  </h1><p class="text split-text o-hidden">
     je crée des expériences numériques remarquables grâce à une décennie
     d'expertise. Ma passion ? Le code de qualité et des solutions robustes qui
     font la différence. Mettez en avant la fiabilité de votre projet avec mes
@@ -20,6 +31,10 @@
       max-width: 100%;
       margin-top: var(--spacing-xxl);
     }
+  }
+
+  .titre {
+    font-weight: 800;
   }
 
   .titre,

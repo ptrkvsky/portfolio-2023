@@ -52,8 +52,13 @@ const { title } = Astro.props;
     </main>
     <Footer />
     <style lang="scss">
+      @import "@styles/mixins.scss";
+
       main {
         padding-top: var(--spacing-4xl);
+        @include mobile-large {
+          padding-top: var(--spacing-2xl);
+        }
       }
     </style>
   </body>

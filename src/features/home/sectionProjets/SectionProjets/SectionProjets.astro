@@ -4,10 +4,13 @@ import { SectionProjetsTitle } from "@features/home/sectionProjets/SectionProjet
 ---
 
 <script>
+  import { isMobile } from "@helpers/isMobile";
   import { changeColor } from "./SectionProjets.animation";
 
   document.addEventListener("DOMContentLoaded", () => {
-    changeColor();
+    if (!isMobile()) {
+      changeColor();
+    }
   });
 </script>
 

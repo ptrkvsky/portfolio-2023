@@ -1,0 +1,8 @@
+.split-text div {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.text-visible.split-text div {
+  overflow: visible;
+}

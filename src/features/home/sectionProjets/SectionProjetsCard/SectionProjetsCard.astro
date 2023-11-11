@@ -1,5 +1,8 @@
 ---
+import Image from "astro/components/Image.astro";
 import { fade } from "astro:transitions";
+import localBirdImage from "@assets/images/safti-fr.png";
+
 interface Props {
   title: string;
   body: string;
@@ -7,19 +10,19 @@ interface Props {
   id: string;
 }
 
-const { href, title, body, id } = Astro.props;
+const { title, body, id } = Astro.props;
 ---
 
 <li class="link-card">
   <a href={`/projet/${id}`}>
-    <img
+    <Image
       alt="image"
       id={`photo-${id}`}
       transition:animate={fade({ duration: "5s" })}
       transition:name={`photo-${id}`}
       class="illu"
       loading="lazy"
-      src="/assets/images/safti-fr.png"
+      src={localBirdImage}
     />
     <h2>
       {title}

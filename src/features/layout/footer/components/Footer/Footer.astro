@@ -12,8 +12,14 @@ import { FormFooter } from "@features/layout/footer/components/Form";
 </footer>
 
 <style lang="scss">
+  @import "@styles/mixins.scss";
+
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include mobile-large {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
