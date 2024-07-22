@@ -9,15 +9,16 @@ const duree = anneeEnCours - 2012;
 ---
 
 <script>
+  import { isMobile } from "@helpers/isMobile";
   import { revealTitle } from "./TitleHero.animation.ts";
   document.addEventListener("DOMContentLoaded", (e) => {
-    if (window.innerWidth > 1024) {
+    if (!isMobile()) {
       revealTitle();
     }
   });
 </script>
 
-<p class="title">
+<p id="title-hero" class="title">
   <span class="split-text o-hidden">
     <span>{duree}</span>
   </span><br />

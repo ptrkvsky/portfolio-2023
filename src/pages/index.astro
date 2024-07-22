@@ -7,7 +7,23 @@ import { SectionServices } from "@features/home/components/SectionServices";
 import { SectionProjets } from "@features/home/sectionProjets/SectionProjets";
 ---
 
-<Layout title="Johan Petrikovsky développeur React Freelance à Toulouse">
+<script>
+  // import { addAstroEventListeners } from "@functions/addAstroEventListeners";
+
+  // export function setColor() {
+  //   document.documentElement.style.setProperty(
+  //     "--color-absolute-zero",
+  //     "hsl(214 100% 35% / 100%)",
+  //   );
+  // }
+
+  // addAstroEventListeners(setColor);
+
+  import { atom } from "nanostores";
+
+  export const $counter = atom(0);
+</script>
+<Layout title="Développeur React Freelance à Toulouse - Johan Petrikovsky ">
   <div class="max-container">
     <Introduction />
     <TitleHero />

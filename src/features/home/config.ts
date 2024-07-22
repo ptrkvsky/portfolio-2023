@@ -1,3 +1,3 @@
 export const configHome = {
-  metaTitle: "Johan Petrikovsky développeur React Freelance à Toulouse",
+  metaTitle: "Développeur React Freelance à Toulouse - Johan Petrikovsky",
 };

@@ -6,8 +6,9 @@ import { SectionProjetsTitle } from "@features/home/sectionProjets/SectionProjet
 <script>
   import { isMobile } from "@helpers/isMobile";
   import { changeColor } from "./SectionProjets.animation";
+  import { addAstroEventListeners } from "@functions/addAstroEventListeners";
 
-  document.addEventListener("DOMContentLoaded", () => {
+  addAstroEventListeners(() => {
     if (!isMobile()) {
       changeColor();
     }

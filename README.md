@@ -164,6 +164,8 @@ Here are some of the key libraries and tools used in this project:
 
 - **GraphQL Code Generator**: Used to generate types and interfaces from the GraphQL Sanity endpoint. All types goes into SanityGraph
 
+- **Nano Store**: Nano Store is a lightweight and efficient state management library for JavaScript applications. It provides a simple API for managing the state of your application, making it easy to handle complex state logic with minimal boilerplate code.
+
 By running these checks before each commit, Husky helps maintain code quality and consistency while ensuring that your project remains error-free.
 
 ## Lighthouse Audit

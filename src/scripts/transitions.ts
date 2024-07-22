@@ -1,4 +1,4 @@
-let lastPhotoId = "";
+// https://github.com/Charca/astro-photo-gallery/blob/main/src/scripts/transitions.ts
 
 /**
  * Save the ID of the last photo we visited. This is used to set the
@@ -6,8 +6,9 @@ let lastPhotoId = "";
  */
 function saveLastPhotoId() {
   const pathname = window.location.pathname;
-  const photoId = pathname.split("/").pop();
-  lastPhotoId = photoId ?? "";
+  const photoId = pathname.split("/").pop() ?? "";
+  // save photoId to sessionStorage
+  sessionStorage.setItem("lastPhotoId", photoId);
 }
 
 /**
@@ -49,6 +50,8 @@ document.addEventListener("astro:page-load", () => {
  * from and set its transition name.
  */
 document.addEventListener("astro:after-swap", () => {
+  const lastPhotoId = sessionStorage.getItem("lastPhotoId");
+
   if (!lastPhotoId) {
     return true;
   }
