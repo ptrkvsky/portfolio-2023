@@ -55,15 +55,15 @@ export function animatePreloader(
     .to("#preloader", {
       y: "100%",
       duration: 0.75,
-      ease: "power2.inOut",
+      ease: "circ.out",
     })
     // Reveal content
     .from("main", {
       scale: 1.01,
       y: "-5%",
       duration: 0.5,
-      delay: -0.4,
-      ease: "power1.inOut",
+      delay: -1.5,
+      ease: "circ.inOut",
     })
     .call(() => {
       body.classList.remove("o-hidden");

@@ -1,0 +1,51 @@
+@import "@styles/mixins.scss";
+
+.section-services {
+  position: relative;
+}
+
+.wrapper-image {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: var(--spacing-section);
+}
+
+.service-item {
+  position: relative;
+  z-index: 10;
+  font-size: clamp(18px, 5rem, 5rem);
+  line-height: clamp(18px, 5rem, 5rem);
+  font-variation-settings: "wght" 500;
+  margin-bottom: var(--spacing-md);
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mobile-large {
+    line-height: 18px;
+  }
+}
+
+.service-image-cover {
+  background-color: var(--color-romance);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.service-background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

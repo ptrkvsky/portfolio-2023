@@ -1,54 +1,57 @@
+---
+import "./SectionServices.styles.scss";
+import devReact from "./images/dev-react.png";
+import redesign from "./images/redesign.png";
+import technicalSeo from "./images/technical-seo.png";
+import designSystem from "./images/design-system.png";
+import performance from "./images/performance.png";
+---
+
 <script>
+  import {
+    animateService,
+    hideImageOnSectionOut,
+  } from "@features/home/components/SectionServices/SectionServices.animations";
   import { addAstroEventListeners } from "@functions/addAstroEventListeners";
-  import gsap from "gsap";
-
-  function animateService() {
-    const services = document.querySelectorAll("#service-list .service-item");
-    services.forEach((service) => {
-      const tl = gsap.timeline({ paused: true }).to(service, {
-        translateX: 30,
-        duration: 0.33,
-        ease: "expo.inout",
-      });
-
-      service.addEventListener("mouseenter", () => {
-        tl.play();
-      });
-      service.addEventListener("mouseleave", () => {
-        tl.reverse();
-      });
-    });
-  }
 
   addAstroEventListeners(animateService);
+  addAstroEventListeners(hideImageOnSectionOut);
 </script>
 
 <section
+  id="section-services"
   data-testid="section-services"
   class="section-services spacing-section"
   aria-label="section services"
 >
   <h2 class="title-mini">Des services adaptés à vos besoins</h2>
   <ul id="service-list" class="service-list">
-    <li class="service-item">Développement d'appplications React</li>
-    <li class="service-item">Refonte d'appplications React</li>
-    <li class="service-item">Optimisation des performances</li>
-    <li class="service-item">Mise en place d'un design system</li>
-    <li class="service-item">Audit SEO Technique</li>
+    <li data-testid="service-1" data-image={devReact.src} class="service-item">
+      Développement d'appplications React
+    </li>
+    <li data-image={redesign.src} class="service-item">
+      Refonte d'appplications React
+    </li>
+    <li data-image={performance.src} class="service-item">
+      Optimisation des performances
+    </li>
+    <li data-image={designSystem.src} class="service-item">
+      Mise en place d'un design system
+    </li>
+    <li data-image={technicalSeo.src} class="service-item">
+      Audit SEO Technique
+    </li>
   </ul>
+  <div>
+    <div class="wrapper-image">
+      <div
+        data-testid="service-background-image"
+        id="service-background-image"
+        class="service-background-image"
+        style={`background-image: url(${devReact.src})`}
+      >
+      </div>
+      <div class="service-image-cover" id="service-image-cover"></div>
+    </div>
+  </div>
 </section>
-
-<style lang="scss">
-  @import "@styles/mixins.scss";
-
-  .service-item {
-    font-size: clamp(18px, 4rem, 4rem);
-    line-height: 4.8rem;
-    font-variation-settings: "wght" 500;
-    margin-bottom: var(--spacing-md);
-
-    @include mobile-large {
-      line-height: 18px;
-    }
-  }
-</style>
